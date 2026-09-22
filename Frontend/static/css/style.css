@@ -1,6 +1,16 @@
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(79, 70, 229, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.12), transparent 30%),
+    #f5f7ff;
+  color: #1f2937;
+}
+
+#app {
+  min-height: 100vh;
 }
 
 .unselectable {
@@ -8,70 +18,113 @@ body {
 }
 
 .flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .occupy-space {
-    flex: 1;
+  flex: 1;
 }
 
 .gap-20 {
-    gap: 20px;
+  gap: 20px;
 }
 
 /* Login Page */
 
 .loginRoot {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  padding: 32px;
+  background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
 }
 
 .loginPaper {
-  	padding: 32px;
-	width: 360px;
+  width: min(420px, 100%);
+  padding: 36px 32px 28px;
+  border-radius: 24px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(79, 70, 229, 0.08);
+  box-shadow: 0 20px 50px rgba(79, 70, 229, 0.12) !important;
+  backdrop-filter: blur(8px);
+}
+
+.loginPaper .MuiTypography-h4 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #1f2937;
+}
+
+.loginPaper .MuiTypography-h5 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #4b5563;
+  font-weight: 600;
 }
 
 .loginForm {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .loginSubmitButton {
-  margin-top: 16px;
+  margin-top: 8px !important;
+  min-height: 44px;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
 }
 
 /* Main Page */
 
 .mainRoot {
   display: flex;
+  min-height: 100vh;
 }
 
 .mainAppBar {
-  position: fixed;
-  z-index: 2;
+  position: fixed !important;
+  z-index: 1300;
   width: 100%;
+  background: rgba(17, 24, 39, 0.82) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12) !important;
+}
+
+.mainAppBar .MuiToolbar-root {
+  min-height: 72px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.mainAppBar .MuiTypography-h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .mainDrawer {
-  width: 240px;
+  width: 260px;
   flex-shrink: 0;
   z-index: 1;
 }
 
-.mainDrawerPaper {
-  width: 240px;
+.drawerPaper {
+  width: 260px;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-right: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(8px);
 }
 
 .mainDrawerContainer {
@@ -80,11 +133,34 @@ body {
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  padding: 8px 10px 16px;
+}
+
+.mainDrawerContainer .MuiListItem-root {
+  border-radius: 14px;
+  margin: 4px 0;
+  transition: all 0.2s ease;
+}
+
+.mainDrawerContainer .MuiListItem-root:hover {
+  background: rgba(79, 70, 229, 0.06);
+}
+
+.mainDrawerContainer .MuiListItemIcon-root {
+  min-width: 42px;
+  color: #4f46e5;
 }
 
 .mainContent {
   flex-grow: 1;
-  padding: 50px 100px;
+  padding: 96px 32px 32px 32px;
+}
+
+.mainContent > * {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.06);
 }
 
 .mainBottomButton {
