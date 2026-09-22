@@ -1,5 +1,14 @@
 # <strong>Bug Tracking System</strong>
 
+## Vercel deployment
+
+This project is set up to run as a Django app behind a Vercel serverless entrypoint.
+
+1. Create a Vercel project from this repository.
+2. Add the environment variables from [.env.example](.env.example) in the Vercel dashboard.
+3. Set the project root to the repository root and use the default Python runtime.
+4. Deploy. The `vercel.json` file routes all requests to the Django app in [api/index.py](api/index.py).
+
 ## <em><strong>Requirements</strong></em>
 
 A software company provides its programmers and testers with a system through which they can communicate online. Each employee has at his disposal a terminal through which:
